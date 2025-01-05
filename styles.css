@@ -1,0 +1,64 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 0;
+    padding: 0 0;
+    max-height: 100svh;
+    height: 100svh;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.scene {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(206, 226, 230); */
+    position: relative;
+}
+
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* background-color: rgb(206, 226, 230); */
+    background-color: black;
+}
+  
+.snowflake {
+    position: absolute;
+    top: -10%;
+    fill: rgb(255, 255, 255);
+    opacity: 0.8;
+    /* move blur to js */
+    /* filter: blur(0.5px); */
+    /* animation: fall linear infinite, sway ease-in-out infinite; */
+    animation: fall-sway linear infinite;
+}
+  
+@keyframes fall-sway {
+    0% {
+      transform: translateX(0) translateY(-10%);
+    }
+    50% {
+      transform: translateX(20px) translateY(50vh);
+    }
+    100% {
+      transform: translateX(-20px) translateY(110svh);
+    }
+  }
+
+.tree {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
