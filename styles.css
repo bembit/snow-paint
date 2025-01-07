@@ -20,6 +20,8 @@ body {
     height: 100%;
     /* background-color: rgb(206, 226, 230); */
     position: relative;
+    background-color: rgb(206, 226, 230);
+
 }
 
 #snow-container {
@@ -30,7 +32,9 @@ body {
     height: 100%;
     pointer-events: none;
     /* background-color: rgb(206, 226, 230); */
-    background-color: black;
+    /* background-color: black; */
+	opacity: 1;
+	z-index: 100000;
 }
   
 .snowflake {
@@ -46,19 +50,179 @@ body {
   
 @keyframes fall-sway {
     0% {
-      transform: translateX(0) translateY(-10%);
+      	transform: translateX(0) translateY(-10%);
     }
     50% {
-      transform: translateX(20px) translateY(50vh);
+      	transform: translateX(20px) translateY(50vh);
     }
     100% {
-      transform: translateX(-20px) translateY(110svh);
+      	transform: translateX(-20px) translateY(110svh);
     }
-  }
+}
 
+/* general tree design? */
 .tree {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 55px;
+    height: 125px;
     background-color: green;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 100;
+}
+
+.sky {
+	/* gradient */
+	/* glow */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60%;
+    width: 100%;
+    background-color: rgb(148, 187, 167); 
+    z-index: 10;
+}
+
+.cloud {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.cloud > div {
+    border-radius: 50%;
+}
+
+.cloud > div:nth-of-type(1) {
+    width: 25px;
+    height: 25px;
+    transform: translateX(12.5px);
+}
+
+.cloud > div:nth-of-type(2) {
+    width: 35px;
+    height: 35px;
+}
+
+.cloud > div:nth-of-type(3) {
+    width: 20px;
+    height: 20px;
+    transform: translateX(-10px);
+}
+
+.cloud-1 {
+    top: 15%;
+    left: 15%;
+    div {
+        background-color: rgb(93, 126, 244);
+    }
+}
+.cloud-2 {
+    top: 35%;
+    left: 35%;
+    transform: rotateY(-180deg);
+    div {
+        background-color: rgb(97, 125, 227);
+    }
+}
+.cloud-3 {
+    top: 60%;
+    left: 60%;
+    div {
+        background-color: rgb(75, 108, 226);
+    }
+}
+
+.mountains {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    /* background-color: rgb(175, 172, 160); */
+    z-index: 100;
+}
+
+.mountain {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    /* height: 80%; */
+    width: 250px;
+    background-color: rgb(97, 95, 91);
+    z-index: 100;
+}
+
+/* before : after  */
+
+.mountain-1 {
+    left: 0;
+    width: 450px;
+    transform: translateY(50px);
+    clip-path: polygon(22% 0, 48% 6%, 67% 17%, 78% 58%, 100% 100%, 0 100%, 7% 30%);
+
+}
+
+.mountain-2 {
+    left: 400px;
+    width: 350px;
+    clip-path: polygon(28% 9%, 73% 0, 95% 30%, 100% 61%, 100% 100%, 0 100%, 7% 30%);
+}
+
+.mountain-3 {
+    left: 880px;
+    width: 450px;
+    clip-path: polygon(22% 0, 48% 6%, 67% 17%, 78% 58%, 100% 100%, 0 100%, 7% 30%);
+    /* transform: skew(-180deg); */
+    transform: rotateY(-180deg);
+}
+
+/* move the entire thing down */
+.lake-container {
+	/* ice effect. */
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 30%;
+	width: 100%;
+	/* background-color: rgb(19, 79, 144); */
+	background-color: rgb(210, 235, 243);
+    clip-path: polygon(25% 2%, 72% 10%, 92% 9%, 100% 0, 100% 100%, 0 100%, 0 0, 10% 8%);
+    z-index: 1000;
+}
+
+.lake {
+    position: absolute;
+	top: 0;
+	left: 5%;
+	height: 100%;
+	width: 90%;
+	clip-path: polygon(28% 9%, 72% 10%, 87% 5%, 100% 15%, 100% 100%, 0 100%, 0 17%, 6% 0);
+	/* background-color: rgb(171, 198, 227); */
+	background-color: rgb(19, 79, 144);
+}
+
+.snow-bumps {
+	position: absolute;
+	top: 70%;
+	left: 0;
+	height: 30%;
+	width: 100%;
+	background-color: rgb(171, 213, 227);
+    overflow: visible;
+	/* should be the bumps container covering the lake */
+	/* clip-path: polygon(28% 9%, 72% 10%, 87% 5%, 100% 15%, 100% 100%, 0 100%, 0 17%, 6% 0); */
+    clip-path: polygon(25% 2%, 72% 10%, 92% 9%, 100% 0, 100% 100%, 0 100%, 0 0, 10% 8%);
+    z-index: 10000;
+}
+
+.dirt {
+
+}
+
+/* figure out struct? */
+.trees-bottom {
+    position: absolute;
+    /* wat */
+  	bottom: 15%;
+    left: 0;
 }
