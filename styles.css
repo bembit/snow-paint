@@ -95,25 +95,26 @@ body {
 }
 
 .cloud > div:nth-of-type(1) {
-    width: 50%;
-    height: 50%;
-    transform: translateX(12.5px);
+    width: 33%;
+    height: 33%;
+    transform: translateX(12%);
 }
 
 .cloud > div:nth-of-type(2) {
-    width: 35px;
-    height: 35px;
+    width: 33%;
+    height: 33%;
 }
 
 .cloud > div:nth-of-type(3) {
-    width: 20px;
-    height: 20px;
-    transform: translateX(-10px);
+    width: 33%;
+    height: 33%;
+    transform: translateX(-7.5%);
 }
 
 .cloud-1 {
-    top: 15%;
+    top: 50%;
     left: 15%;
+    /* transform: scale(0.5); */
     div {
         background-color: rgb(93, 126, 244);
     }
@@ -132,6 +133,67 @@ body {
     div {
         background-color: rgb(75, 108, 226);
     }
+}
+
+/* cloud variant */
+.cloud2 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 15%;
+    left: 25%;
+    width: 15%;
+    height: 15%;
+}
+
+.cloud2 > div {
+    width: 33%;
+    height: 50%;
+    background-color: rgb(89, 144, 222);
+    clip-path: ellipse(50% 44% at 50% 100%);
+}
+
+.cloud2 > div:nth-of-type(2) {
+    /* transform: scale(1.2); */
+}
+
+/* imagine spending your evening like this :D */
+.cloud3 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 25%;
+    left: 55%;
+    width: 25%;
+    height: 15%;
+}
+
+.cloud3 > div {
+    height: 50%;
+    background-color: rgb(89, 144, 222);
+    clip-path: ellipse(50% 44% at 50% 100%);
+}
+
+.cloud3 > div:nth-of-type(1) {
+    width: 33%;
+}
+.cloud3 > div:nth-of-type(2) {
+    width: 50%;
+}
+.cloud3 > div:nth-of-type(3) {
+    width: 33%;
+}
+
+.cloud4 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 45%;
+    left: 55%;
+    width: 20%;
+    height: 15%;
+    background-color: rgb(197, 183, 243);
+    clip-path: polygon(68% 0, 80% 18%, 85% 0, 97% 0, 100% 33%, 0 33%, 8% 0, 23% 0, 38% 16%, 51% 0);
 }
 
 .mountains {
@@ -201,6 +263,15 @@ body {
 	clip-path: polygon(28% 9%, 72% 10%, 87% 5%, 100% 15%, 100% 100%, 0 100%, 0 17%, 6% 0);
 	/* background-color: rgb(171, 198, 227); */
 	background-color: rgb(19, 79, 144);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lake > div {
+    background: rgb(0, 247, 255);
+    height: 5%;
+    transform: rotate(-3deg);
 }
 
 .snow-bumps {
