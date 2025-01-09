@@ -78,7 +78,7 @@ body {
     left: 0;
     height: 60%;
     width: 100%;
-    background-color: rgb(148, 187, 167); 
+    background-color: rgb(79, 151, 114); 
     z-index: 10;
 }
 
@@ -114,7 +114,8 @@ body {
 .cloud-1 {
     top: 50%;
     left: 15%;
-    /* transform: scale(0.5); */
+    transform: scale(0.7);
+    opacity: .7;
     div {
         background-color: rgb(93, 126, 244);
     }
@@ -140,10 +141,11 @@ body {
     position: absolute;
     display: flex;
     align-items: center;
-    top: 15%;
-    left: 25%;
+    top: 70%;
+    left: 23%;
     width: 15%;
     height: 15%;
+    transform: scale(0.5);
 }
 
 .cloud2 > div {
@@ -162,7 +164,7 @@ body {
     position: absolute;
     display: flex;
     align-items: center;
-    top: 25%;
+    top: 35%;
     left: 55%;
     width: 25%;
     height: 15%;
@@ -188,7 +190,7 @@ body {
     position: absolute;
     display: flex;
     align-items: center;
-    top: 45%;
+    top: 55%;
     left: 55%;
     width: 20%;
     height: 15%;
@@ -202,8 +204,20 @@ body {
     left: 0;
     height: 25%;
     width: 100%;
-    /* background-color: rgb(175, 172, 160); */
+    /* background-color: rgb(148, 187, 167);  */
     z-index: 100;
+    /* filter: blur(10px); */
+}
+
+.mountains-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* height: 1%; */
+    width: 100%;
+    background-color: rgb(148, 187, 167);
+    box-shadow: 25px 150px 150px 150px rgba(255, 255, 255, 1);
 }
 
 .mountain {
@@ -212,8 +226,18 @@ body {
     height: 100%;
     /* height: 80%; */
     /* width: 250px; */
-    background-color: rgb(97, 95, 91);
+    background-color: rgb(226, 240, 200);
     z-index: 100;
+}
+
+.mountain::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border: 12px solid black;
 }
 
 /* before : after  */
@@ -261,16 +285,54 @@ body {
 	width: 90%;
 	clip-path: polygon(28% 9%, 72% 10%, 87% 5%, 100% 15%, 100% 100%, 0 100%, 0 17%, 6% 0);
 	/* background-color: rgb(171, 198, 227); */
-	background-color: rgb(53, 97, 88);
+	/* background-color: rgb(53, 97, 88); */
+    background-color: rgb(79, 151, 114); 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.lake > div {
-    background: rgb(66, 119, 82);
+.lake > div:not(:first-of-type):not(:last-of-type) {
+    background: rgb(164, 196, 196);
     height: 5%;
     transform: rotate(-3deg);
+    /* clip-path: polygon(50% 50%, 0 0, 0 100%); */
+}
+
+.lake > div:nth-of-type(2) {
+    clip-path: polygon(50% 50%, 0 0, 0 100%);
+}
+
+.lake > div:nth-of-type(3) {
+    clip-path: polygon(60% 50%, 0 0, 0 100%);
+}
+
+.lake > div:nth-of-type(4) {
+    clip-path: polygon(60% 50%, 0 0, 0 100%);
+}
+
+.lake > div:nth-of-type(5) {
+    clip-path: polygon(70% 50%, 0 0, 0 100%);
+}
+
+.lake > div:nth-of-type(6) {
+    clip-path: polygon(70% 50%, 0 0, 0 100%);
+}
+
+.lake > div:nth-of-type(7) {
+    clip-path: polygon(85% 50%, 0 0, 0 100%);
+}
+
+.lake > div:first-of-type {
+    height: 15%;
+    transform: rotate(-1deg);
+    background: rgb(66, 119, 82);
+}
+
+.lake > div:last-of-type {
+    height: 15%;
+    transform: rotate(-1deg);
+    background: rgb(66, 119, 82);
 }
 
 .snow-bumps {
