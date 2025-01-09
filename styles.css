@@ -198,9 +198,9 @@ body {
 
 .mountains {
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 0;
-    height: 30%;
+    height: 25%;
     width: 100%;
     /* background-color: rgb(175, 172, 160); */
     z-index: 100;
@@ -223,7 +223,6 @@ body {
     width: 35%;
     transform: translateY(50px);
     clip-path: polygon(22% 0, 48% 6%, 67% 17%, 78% 58%, 100% 100%, 0 100%, 7% 30%);
-
 }
 
 .mountain-2 {
@@ -244,12 +243,12 @@ body {
 .lake-container {
 	/* ice effect. */
 	position: absolute;
-	top: 50%;
+	top: 55%;
 	left: 0;
-	height: 30%;
+	height: 25%;
 	width: 100%;
 	/* background-color: rgb(19, 79, 144); */
-	background-color: rgb(210, 235, 243);
+	background-color: rgb(217, 226, 190);
     clip-path: polygon(25% 2%, 72% 10%, 92% 9%, 100% 0, 100% 100%, 0 100%, 0 0, 10% 8%);
     z-index: 1000;
 }
@@ -262,25 +261,25 @@ body {
 	width: 90%;
 	clip-path: polygon(28% 9%, 72% 10%, 87% 5%, 100% 15%, 100% 100%, 0 100%, 0 17%, 6% 0);
 	/* background-color: rgb(171, 198, 227); */
-	background-color: rgb(19, 79, 144);
+	background-color: rgb(53, 97, 88);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .lake > div {
-    background: rgb(0, 247, 255);
+    background: rgb(66, 119, 82);
     height: 5%;
     transform: rotate(-3deg);
 }
 
 .snow-bumps {
 	position: absolute;
-	top: 70%;
+	top: 75%;
 	left: 0;
-	height: 30%;
+	height: 25%;
 	width: 100%;
-	background-color: rgb(171, 213, 227);
+	background-color: rgb(217, 226, 190);
     overflow: visible;
 	/* should be the bumps container covering the lake */
 	/* clip-path: polygon(28% 9%, 72% 10%, 87% 5%, 100% 15%, 100% 100%, 0 100%, 0 17%, 6% 0); */
